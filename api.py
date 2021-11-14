@@ -17,7 +17,7 @@ api = Api(app)
 class PredictValue(Resource):
     def get(self):
         # get request : returns the JSON format for API request
-        return {"JSON data format": {'Category':'Alkoholunfälle','Type':'insgesamt','Year':'2021','Month':'01'}}
+        return {"Please send the POST request with this JSON data format": {'Category':'Alkoholunfälle','Type':'insgesamt','Year':'2021','Month':'01'}}
     def post(self):
         # Get the data from the POST request.
         data = request.get_json(force=True)
