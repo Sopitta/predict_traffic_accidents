@@ -44,5 +44,5 @@ class PredictValue(Resource):
 
 api.add_resource(PredictValue, '/')
 # comment for deploying/uncomment when testing locally
-if __name__ == '__main__':
-    app.run(debug=True)
+#if __name__ == '__main__':
+#    app.run(debug=True)
