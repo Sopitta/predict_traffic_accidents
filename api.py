@@ -27,11 +27,11 @@ class PredictValue(Resource):
             year = int(data['Year']) - 2000
             month = int(data['Month'])
             
-            #create array from Category and Type
+            #create an array from Category and Type
             arr_ct = enc.transform(np.array([cat,type]).reshape(-1,2)).toarray()
-            #create array from Year and Month
+            #create an array from Year and Month
             arr_ym = np.array([year,month]).reshape(-1,2)
-            #create array for prediction
+            #Concatenate arrays to form an input for prediction
             data_in = np.concatenate([arr_ct,arr_ym],axis = 1)
             
 
@@ -39,7 +39,7 @@ class PredictValue(Resource):
             output = {'prediction': prediction[0]}
             return output
         except:
-            return {"Use thus JSON format": {'Category':'Alkoholunfälle','Type':'insgesamt','Year':'2021','Month':'01'}}
+            return {"Use the JSON format": {'Category':'Alkoholunfälle','Type':'insgesamt','Year':'2021','Month':'01'}}
         
 
 api.add_resource(PredictValue, '/')

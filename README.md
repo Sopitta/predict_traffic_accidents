@@ -11,5 +11,5 @@ Since the predict values are non-negative and discrete. The selected model is a 
 
 ## End point
 the project endpoint is at https://predictaccidents.herokuapp.com/
-The post request format is a json body shown below \\
+The post request format is a json body shown below <br>
 `{'Category':'Alkoholunfälle','Type':'insgesamt','Year':'2021','Month':'01'}` 
